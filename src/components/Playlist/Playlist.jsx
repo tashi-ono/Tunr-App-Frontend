@@ -1,6 +1,7 @@
 import React from "react";
-import SongDelete from "./SongDelete";
+import SongDelete from "../SongDelete/SongDelete";
 import axios from "axios";
+import "./Playlist.css";
 
 const Playlist = ({ refreshSongs, songs }) => {
   // when song name is clicked, it will change isFave to true and add it to api

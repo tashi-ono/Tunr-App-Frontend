@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "./SongDelete.css";
 
 const SongDelete = ({ songId, refreshSongs }) => {
   const deleteSong = async () => {

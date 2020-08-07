@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form.css";
 
 // will need to add a value
 const Form = ({ handleChange, handleSubmit, userInput }) => {
@@ -27,7 +28,9 @@ const Form = ({ handleChange, handleSubmit, userInput }) => {
           onChange={handleChange}
           value={userInput.time}
         />
-        <button type="submit">Submit</button>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   );

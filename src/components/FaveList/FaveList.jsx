@@ -1,4 +1,5 @@
 import React from "react";
+import "./FaveList.css";
 
 const FaveList = ({ songs }) => {
   const faveSongs = songs

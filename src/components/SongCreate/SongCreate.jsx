@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Form from "./Form";
+import Form from "../Form/Form";
 import axios from "axios";
+import "./SongCreate.css";
 
 const SongCreate = ({ refreshSongs }) => {
   // take in user input

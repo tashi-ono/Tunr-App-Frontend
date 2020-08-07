@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Playlist from "./components/Playlist";
-import FaveList from "./components/FaveList";
-import SongCreate from "./components/SongCreate";
+import Playlist from "./components/Playlist/Playlist";
+import FaveList from "./components/FaveList/FaveList";
+import SongCreate from "./components/SongCreate/SongCreate";
 import axios from "axios";
 import "./App.css";
 
