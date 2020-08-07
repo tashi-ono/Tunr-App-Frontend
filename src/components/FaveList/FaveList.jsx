@@ -16,10 +16,12 @@ const FaveList = ({ songs }) => {
   return (
     <div className="fave-list">
       <h2>Favorite Songs List</h2>
-      <span>Song</span>
-      <span>Artist</span>
-      <span>Time</span>
-      {faveSongs}
+      <div className="fave-list-headers">
+        <span>Song</span>
+        <span>Artist</span>
+        <span>Time</span>
+      </div>
+      <div className="fave-song">{faveSongs}</div>
     </div>
   );
 };

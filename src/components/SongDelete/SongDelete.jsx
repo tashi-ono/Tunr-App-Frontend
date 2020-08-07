@@ -12,7 +12,11 @@ const SongDelete = ({ songId, refreshSongs }) => {
     }
   };
 
-  return <span onClick={deleteSong}>X</span>;
+  return (
+    <span className="delete-button" onClick={deleteSong}>
+      X
+    </span>
+  );
 };
 
 export default SongDelete;

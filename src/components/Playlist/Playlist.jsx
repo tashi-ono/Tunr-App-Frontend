@@ -35,15 +35,19 @@ const Playlist = ({ refreshSongs, songs }) => {
     displaySongs = songs.map((song) => {
       return (
         <div className="song" key={song.id}>
-          <span onClick={() => addToFaves(song)}>{song.title}</span>
-          <span>{song.artist}</span>
-          <span>{song.time}</span>
-          <SongDelete songId={song.id} refreshSongs={refreshSongs} />
-          {song.isFave ? (
-            <span className="heart-icon" onClick={() => removeFave(song)}>
-              &#128156;
-            </span>
-          ) : null}
+          <div className="right-details">
+            <p onClick={() => addToFaves(song)}>{song.title}</p>
+            <p>{song.artist}</p>
+          </div>
+          <div className="left-details">
+            <span>{song.time} </span>
+            <SongDelete songId={song.id} refreshSongs={refreshSongs} />
+            {song.isFave ? (
+              <span className="heart-icon" onClick={() => removeFave(song)}>
+                &#128156;
+              </span>
+            ) : null}
+          </div>
         </div>
       );
     });

@@ -1,3 +1,17 @@
 .playlist-container {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60vw;
+}
+
+.song {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.left-details {
+  display: flex;
+  align-items: center;
 }

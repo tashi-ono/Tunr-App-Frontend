@@ -1,0 +1,23 @@
+.fave-list-headers span {
+  margin: 30px;
+  padding-right: 70px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; */
+}
+
+.fave-song {
+  /* margin: 30px;
+  padding-right: 20px;
+  text-align: center; */
+  display: flex;
+  flex-direction: column;
+}
+
+.fave-song span {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;*/
+}
