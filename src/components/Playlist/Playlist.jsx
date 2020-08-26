@@ -43,7 +43,12 @@ const Playlist = ({ refreshSongs, songs }) => {
             <span>{song.time} </span>
             <SongDelete songId={song.id} refreshSongs={refreshSongs} />
             {song.isFave ? (
-              <span className="heart-icon" onClick={() => removeFave(song)}>
+              <span
+                className="heart-icon"
+                role="img"
+                aria-label="heart"
+                onClick={() => removeFave(song)}
+              >
                 &#128156;
               </span>
             ) : null}
