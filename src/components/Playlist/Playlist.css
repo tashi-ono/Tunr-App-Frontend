@@ -5,13 +5,18 @@
   width: 60vw;
 }
 
-.song {
+.playlist-container .song {
   display: flex;
   justify-content: space-between;
   /* border: 1px solid red; */
+  height: 100px;
 }
 
 .left-details {
   display: flex;
   align-items: center;
+}
+
+.right-details {
+  width: 40vw;
 }

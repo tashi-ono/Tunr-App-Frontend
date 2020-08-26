@@ -1,23 +1,24 @@
-.fave-list-headers span {
-  margin: 30px;
-  padding-right: 70px;
-  text-align: center;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly; */
+.fave-list-headers {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
 }
 
 .fave-song {
-  /* margin: 30px;
-  padding-right: 20px;
-  text-align: center; */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  padding: 15px;
 }
 
-.fave-song span {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around;*/
+.song-header {
+  margin-right: 75px;
+}
+
+.time-header {
+  margin-left: 75px;
 }

@@ -6,23 +6,25 @@ const FaveList = ({ songs }) => {
     .filter((song) => song.isFave)
     .map((song) => {
       return (
-        <div key={song.id}>
-          <span>{song.title}</span>
-          <span>{song.artist}</span>
-          <span>{song.time}</span>
+        <div className="fave-song" key={song.id}>
+          <span className="song">{song.title}</span>
+          <span className="artist">{song.artist}</span>
+          <span className="time">{song.time}</span>
         </div>
       );
     });
   return (
-    <div className="fave-list">
+    <>
       <h2>Favorite Songs List</h2>
-      <div className="fave-list-headers">
-        <span>Song</span>
-        <span>Artist</span>
-        <span>Time</span>
+      <div className="fave-list-container">
+        <div className="fave-list-headers">
+          <span className="song-header">Song</span>
+          <span className="artist-header">Artist</span>
+          <span className="time-header">Time</span>
+        </div>
+        <div className="fave-list">{faveSongs}</div>
       </div>
-      <div className="fave-song">{faveSongs}</div>
-    </div>
+    </>
   );
 };
 
