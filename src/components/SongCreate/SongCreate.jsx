@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "../Form/Form";
 import axios from "axios";
 import "./SongCreate.css";
+import apiUrl from "../../apiConfig";
 
 const SongCreate = ({ refreshSongs }) => {
   // take in user input
@@ -26,7 +27,7 @@ const SongCreate = ({ refreshSongs }) => {
 
   const createSong = async (newSongObj) => {
     try {
-      await axios.post(`http://localhost:3000/songs`, newSongObj);
+      await axios.post(`${apiUrl}`, newSongObj);
       refreshSongs();
     } catch (err) {
       console.error(err);

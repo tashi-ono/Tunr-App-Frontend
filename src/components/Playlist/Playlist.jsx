@@ -2,6 +2,7 @@ import React from "react";
 import SongDelete from "../SongDelete/SongDelete";
 import axios from "axios";
 import "./Playlist.css";
+import apiUrl from "../../apiConfig";
 
 const Playlist = ({ refreshSongs, songs }) => {
   // when song name is clicked, it will change isFave to true and add it to api
@@ -9,7 +10,7 @@ const Playlist = ({ refreshSongs, songs }) => {
     console.log("fave song", faveSong);
     try {
       faveSong.isFave = true;
-      await axios.put(`http://localhost:3000/songs/${faveSong.id}`, faveSong);
+      await axios.put(`${apiUrl}/${faveSong.id}`, faveSong);
       refreshSongs();
     } catch (err) {
       console.error(err);
@@ -20,10 +21,7 @@ const Playlist = ({ refreshSongs, songs }) => {
     console.log("unfaved song", unfavedSong);
     try {
       unfavedSong.isFave = false;
-      await axios.put(
-        `http://localhost:3000/songs/${unfavedSong.id}`,
-        unfavedSong
-      );
+      await axios.put(`${apiUrl}/${unfavedSong.id}`, unfavedSong);
       refreshSongs();
     } catch (err) {
       console.error(err);

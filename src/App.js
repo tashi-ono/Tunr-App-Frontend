@@ -4,13 +4,14 @@ import FaveList from "./components/FaveList/FaveList";
 import SongCreate from "./components/SongCreate/SongCreate";
 import axios from "axios";
 import "./App.css";
+import apiUrl from "./apiConfig";
 
 function App() {
   const [songs, setSongs] = useState([]);
 
   const refreshSongs = async () => {
     try {
-      const allSongs = await axios.get("http://localhost:3000/songs");
+      const allSongs = await axios.get(`${apiUrl}`);
       console.log("Playlist data", allSongs.data);
       setSongs(allSongs.data);
     } catch (err) {
