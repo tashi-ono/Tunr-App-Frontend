@@ -12,11 +12,16 @@
   height: 100px;
 }
 
-.left-details {
+.right-details {
   display: flex;
   align-items: center;
 }
 
-.right-details {
+.left-details {
   width: 40vw;
+  cursor: pointer;
+}
+
+.heart-icon {
+  cursor: pointer;
 }
